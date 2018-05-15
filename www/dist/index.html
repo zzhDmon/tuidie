@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="zh-cmn-Hans" xmlns:ng="http://angularjs.org" ng-app="app">
+<head>
+  <meta charset="utf-8" />
+  <title>ECShop</title>
+
+  <meta name="description" content="ECShop" />
+  <meta name="keywords" content="ECShop" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta content="telephone=no,email=no" name="format-detection">
+
+  <link rel="apple-touch-icon-precomposed" href="image/apple-touch-icon.png">
+  <link rel="apple-touch-icon" href="image/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="image/icon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="image/icon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="image/icon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="image/icon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="image/icon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="image/icon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="image/icon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="image/icon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="image/icon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="image/icon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="image/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="image/icon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="image/icon/favicon-16x16.png">
+  <link rel="manifest" href="image/icon/manifest.json">
+
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="css/app-41ead03b6d.base.css">
+
+  <link rel="stylesheet" href="css/app-f6bf0347f9.main.css">
+
+  <script type="text/javascript">
+    var GLOBAL_CONFIG = {};
+  </script>
+  <script src="config/config.app.js?v=1506054607144"></script>
+
+</head>
+
+<body id="ng-app"
+      ng-controller="AppController"
+      ng-class="{'is-ie': app.useragent.isIE, 'is-weixin': app.useragent.isWeixin, 'is-mobile': app.useragent.isMobile, 'is-browser': app.useragent.isBrowser}">
+
+  <toast></toast>
+
+  <div class="app" id="app" ui-view>
+  </div>
+
+  <div class="splash" id="splash">
+    <div class="inner">
+      <img src="image/loading.png"/>
+    </div>
+  </div>
+
+  <script src="js/app-4e8c475056.libs.js"></script>
+
+  <script src="js/app-8580ffeb00.base.js"></script>
+
+  <script src="js/app-3a0ddb36e8.main.js"></script>
+
+  <script type="text/javascript">
+    $(window).load(function(){
+      var el = $('#splash');
+      el.fadeOut(500, function(){
+        el.remove();
+      });
+    })
+  </script>
+
+</body>
+</html>
