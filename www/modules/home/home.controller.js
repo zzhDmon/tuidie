@@ -165,6 +165,19 @@
                         });
                     }, 1);
                 });
+
+                // $scope.newslist=["1经纪人同行加入房田，马上换福利","2同行加入房田，马上换福利","3加入房田，马上换福利","42323"]
+                // $scope.autoScroll = function(obj){  
+                // 		$(obj).find("ul").animate({  
+                // 			marginTop : "-20px"  
+                // 		},500,function(){  
+                // 			$(this).css({marginTop : "0px"}).find("li:first").appendTo(this);  
+                // 			})  
+                // 		}  
+
+                // $interval(function(){
+                // 		$scope.autoScroll(".minerool")
+                // },2000)
         }
 
         function _reloadCategories() {

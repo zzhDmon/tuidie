@@ -96,19 +96,31 @@
 
         <div class="tabbar fixed-bottom">
             <div class="tab" ng-click="goHome()">
-                <img class="tab-icon" src="image/tab-home-normal.png"/>
+                <div class="img">
+                    <img class="tab-icon" ng-src="image/tuidie/tabs/首页.png" />
+                </div>
+                <p>首页</p>
             </div>
             <div class="tab" ng-click="goCategory()">
-                <img class="tab-icon" src="image/tab-category-normal.png"/>
+                <div class="img">
+                    <img class="tab-icon" ng-src="image/tuidie/tabs/蜕蝶日记.png" />
+                </div>
+                <p>蜕蝶日记</p>
             </div>
             <div class="tab active" ng-click="goCart()">
-                <img class="tab-icon" src="image/tab-cart-active.png"/>
+                <div class="img">
+                    <img class="tab-icon" ng-src="image/tuidie/tabs/购物车2.png" />
+                </div>
+                <p>购物车</p>
                 <div class="tab-badge" ng-if="cartModel.total > 0">
                     {{cartModel.total}}
                 </div>
             </div>
             <div class="tab" ng-click="goProfile()">
-                <img class="tab-icon" src="image/tab-profile-normal.png"/>
+                <div class="img">
+                    <img class="tab-icon" ng-src="image/tuidie/tabs/我的.png" />
+                </div>
+                <p>我的</p>
             </div>
         </div>
     </div>
