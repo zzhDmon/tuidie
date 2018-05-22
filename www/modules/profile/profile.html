@@ -2,7 +2,7 @@
 	<div class="app-content">
         <div class="profile-head">
             
-            <div class="head-user-info">
+            <div ui-sref="my-team" class="head-user-info">
             	<div class="head-img"><img class="head-avatar" ng-src="image/default-avatar.png" lazy-img="{{user.avatar.thumb}}"/></div>
             	<div class="head-info" ng-click="touchSignin()">
 	                <div class="info-name">{{isSignIn() ? userName: '点击登录'}}</div>
@@ -57,11 +57,11 @@
             </div>
         </div>-->
         <div class="profile-flex-menu">
-        	<div class="flex-item">
+        	<div ui-sref="my-order({tab:'created'})" class="flex-item">
         		<div class="item-icon"><i class="iconfont icon-daifukuan"></i></div>
         		<div class="item-text">代付款</div>
         	</div>
-        	<div class="flex-item">
+        	<div ui-sref="my-favorite" class="flex-item">
         		<div class="item-icon"><i class="iconfont icon-shoucang"></i></div>
         		<div class="item-text">收藏</div>
         	</div>
@@ -135,12 +135,12 @@
             <div class="item-desc"></div>
             <img class="item-arrow" src="image/nav-right.png"/>
         </div>-->
-        <div class="profile-flex-item">
+        <div ui-sref="my-score({tab:'all'})" class="profile-flex-item">
         	<div class="item-icon"><i class="iconfont icon-zhuanjifen"></i></div>
         	<div class="item-name">我的积分</div>
         	<div class="item-more"><i class="iconfont icon-gengduo"></i></div>
         </div>
-        <div class="profile-flex-item">
+        <div ui-sref="my-cashgift" class="profile-flex-item">
         	<div class="item-icon"><i class="iconfont icon-hongbao"></i></div>
         	<div class="item-name">我的红包</div>
         	<div class="item-more"><i class="iconfont icon-gengduo"></i></div>
@@ -151,16 +151,18 @@
         	<div class="item-more"><i class="iconfont icon-gengduo"></i></div>
         </div>
         <div class="profile-flex-item">
-        	<div class="item-icon"><i class="iconfont icon-shouji"></i></div>
-        	<div class="item-name">客服电话</div>
-        	<div class="item-more"><i class="iconfont icon-gengduo"></i></div>
+        	
+	        	<div class="item-icon"><i class="iconfont icon-shouji"></i></div>
+	        	<div class="item-name"><a href="tel:18850148217">客服电话</a></div>
+	        	<div class="item-more"><i class="iconfont icon-gengduo"></i></div>
+        	
         </div>
         <div class="profile-flex-item">
         	<div class="item-icon"><i class="iconfont icon-yinhangka"></i></div>
         	<div class="item-name">我的银行卡</div>
         	<div class="item-more"><i class="iconfont icon-gengduo"></i></div>
         </div>
-        <div class="profile-flex-item">
+        <div ui-sref="change-password" class="profile-flex-item">
         	<div class="item-icon"><i class="iconfont icon-mibao"></i></div>
         	<div class="item-name">密码与保护</div>
         	<div class="item-more"><i class="iconfont icon-gengduo"></i></div>

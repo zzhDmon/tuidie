@@ -128,6 +128,7 @@
 				API.user.profileGet().then(function (user) {
 					AppAuthenticationService.setUser(user);
 					$scope.user = user;
+					console.log(($scope.user))
 					if(user.nickname){
 						$scope.userName = user.nickname;
 					} else {

@@ -4518,6 +4518,9 @@ a{
 	width: calc(100% - 74px);
 	height: 54px;
 }
+.profile-flex-item .item-name a{
+	color: rgb(51,51,51);
+}
 .profile-flex-item .item-more{
 	width: 20px;
 	height: 54px;
