@@ -106,6 +106,8 @@
                 product: product.id,
             });
         }
+        
+        
 
         function _reloadBanners() {
             API.banner
@@ -229,6 +231,13 @@
                     $scope.newArrival = products;
                 });
         }
+        _reloadNewArrival()
+        $scope.touchProduct=function(product){
+        	console.log(product)
+        	$state.go('product', {
+				product: product.id
+			});
+        }
 
         function _reloadHomeList() {
             API.product
@@ -239,6 +248,7 @@
                     $scope.editorChoice = data.good_products;
                 });
         }
+//      _reloadHomeList()
 
         function _reload() {
             _reloadBanners();
@@ -269,7 +279,6 @@
 
         function _loadMore() {
             // TODO:
-            console.log('加载')
         }
 
 

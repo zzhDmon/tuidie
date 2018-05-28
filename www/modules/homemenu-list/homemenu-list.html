@@ -23,6 +23,8 @@
         <div class="main-item" ng-click="touchMain()">
           全部
         </div>
+        
+        
         <div class="main-item" ng-repeat="item in subCategories track by $index" ng-click="touchMain(item)">
           {{item.name}}
         </div>

@@ -72,10 +72,11 @@
        
         <!--picture-->
         <div class="home-flex-picture">
-            <div class="flex-item">
-                <img src="" alt="">
+            <div ng-click="touchProduct(product)" ng-repeat="product in newArrival track by $index" class="flex-item">
+                <img ng-src="{{product.default_photo.thumb}}" alt="" />
+<!--                <img ng-src="{{formatUrl(banner.photo.large) || 'image/default-photo.png'}}" class="slide-image" />-->
             </div>
-            <div class="flex-item">
+            <!--<div class="flex-item">
                 <img src="" alt="">
             </div>
             <div class="flex-item">
@@ -87,7 +88,7 @@
 
             <div class="flex-item-big">
                 <img src="" alt="">
-            </div>
+            </div>-->
         </div>
         <!--big picture-->
         

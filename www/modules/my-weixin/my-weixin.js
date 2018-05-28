@@ -11,11 +11,11 @@
 	function config($stateProvider, $urlRouterProvider) {
 
 		$stateProvider
-			.state('my-team', {
+			.state('my-weixin', {
 				needAuth: true,
-				url: '/my-team',
-				title: "团队",
-				templateUrl: 'modules/my-team/my-team.html',
+				url: '/my-weixin',
+				title: "微信",
+				templateUrl: 'modules/my-weixin/my-weixin.html',
 			});
 
 	}

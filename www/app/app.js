@@ -18,6 +18,7 @@
 			'angular-cache',
 			'angular-loading-bar',
 			'ngToast',
+//			'ngScreening'
 			// 'anim-in-out'
 		]);
 
