@@ -6,9 +6,9 @@
         .module('app')
         .controller('HomeController', HomeController);
 
-    HomeController.$inject = ['$scope', '$http', '$rootScope','$timeout', '$location', '$state', 'API', 'ENUM', 'CONSTANTS', '$window', 'AppAuthenticationService', 'CartModel', 'ConfigModel'];
+    HomeController.$inject = ['$interval','$scope', '$http', '$rootScope','$timeout', '$location', '$state', 'API', 'ENUM', 'CONSTANTS', '$window', 'AppAuthenticationService', 'CartModel', 'ConfigModel'];
 
-    function HomeController($scope, $http, $rootScope, $timeout, $location, $state, API, ENUM, CONSTANTS, $window, AppAuthenticationService, CartModel, ConfigModel) {
+    function HomeController($interval,$scope, $http, $rootScope, $timeout, $location, $state, API, ENUM, CONSTANTS, $window, AppAuthenticationService, CartModel, ConfigModel) {
 
         var MAX_BANNERS = 10;
         var MAX_NOTICES = 5;
@@ -156,6 +156,8 @@
                 })
                 .then(function(notices) {
                     $scope.notices = notices;
+                    console.log(notices)
+                    
                     var timer = $timeout(function() {
                         new Swiper('.notice-slide', {
                             spaceBetween: 30,
@@ -168,19 +170,19 @@
                     }, 1);
                 });
 
-                // $scope.newslist=["1经纪人同行加入房田，马上换福利","2同行加入房田，马上换福利","3加入房田，马上换福利","42323"]
-                // $scope.autoScroll = function(obj){  
-                // 		$(obj).find("ul").animate({  
-                // 			marginTop : "-20px"  
-                // 		},500,function(){  
-                // 			$(this).css({marginTop : "0px"}).find("li:first").appendTo(this);  
-                // 			})  
-                // 		}  
-
-                // $interval(function(){
-                // 		$scope.autoScroll(".minerool")
-                // },2000)
         }
+                   $scope.newslist=["1.欣赏——发自内心。","2.我们创造的不是美，是自信。","3.蜕蝶整形，为你变美。"]
+                   $scope.autoScroll = function(obj){  
+                   		$(obj).find("ul").animate({  
+                   			marginTop : "-20px"  
+                   		},500,function(){  
+                   			$(this).css({marginTop : "0px"}).find("li:first").appendTo(this);  
+                   			})  
+                   		}  
+
+                   $interval(function(){
+                   		$scope.autoScroll(".tuidie-home .swiper-container")
+                   },2000)
 
         function _reloadCategories() {
             API.category

@@ -1,6 +1,233 @@
-.test{
-    color: red;
-    a{
-        color: black;
+.tuidie-home{
+    .home-search {
+        width: 100%;
+        height: 44px;
+        position: fixed;
+        z-index: 99;
+        top: 0;
+        .search {
+            position: relative;
+            margin: 5px auto;
+            height: 34px;
+            width: 80%;
+            box-sizing: border-box;
+            overflow: hidden;
+            background-color: rgba(255,255,255,0.8);
+            border-radius: 17px;
+            .search-icon {
+                position: absolute;
+                top: 5px;
+                left: 6px;
+                width: 24px;
+                height: 24px;
+                text-align: center;
+                line-height: 24px;
+                color:rgb(241,158,166);
+                border-right: 1px solid rgb(241,158,166);
+                .iconfont{
+                    font-size: 20px;
+                }
+            }
+            .search-text {
+                display: block;
+                width: 100%;
+                height: 34px;
+                margin: 0 auto;
+                padding-left: 38px;
+                box-sizing: border-box;
+                overflow: hidden;
+                color:rgb(241,158,166);
+                font-size: 14px;
+                font-weight: normal;
+                line-height: 34px;
+            }
+        }
+    }
+    .home-banner {
+        display: block;
+        width: 100%;
+        height: 0;
+        padding-bottom: 50%;
+        text-align: center;
+        color: #404245;
+        background-color: #f6f6f6;
+        border-bottom: #e2e2e2 1px solid;
+        .banner-slide {
+            display: block;
+            background-color: #ffffff;
+            .slide-image {
+                width: 100%;
+                max-width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    
+    .home-menu {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        padding:5px 0;
+        width: 100%;
+        background-color: #ffffff;
+        overflow: hidden;
+        border-bottom: #e2e2e2 1px solid;
+        .menu-item {
+            display: block;
+            width: 25%;
+            border: none;
+            box-sizing: border-box;
+            padding: 5px 0;
+            .item-icon {
+                display: block;
+                width: 44px;
+                height: 44px;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+            .item-text {
+                display: block;
+                width: 100%;
+                height: 24px;
+                line-height: 24px;
+                box-sizing: border-box;
+                border: none;
+                overflow: hidden;
+                color: #404245;
+                font-size: 14px;
+                font-weight: normal;
+                text-align: center;
+                margin-top: 4px;
+            }
+        }
+    }
+    
+    .home-notice {
+        position: relative;
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+        height: 44px;
+        text-align: center;
+        background-color: rgb(255,82,104);
+        overflow: hidden;
+        .notice-icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 44px;
+            height: 44px;
+            text-align:center;
+            line-height:44px;
+            color: white;
+        }
+        .notice-vline {
+            position: absolute;
+            top: 13px;
+            left: 34px;
+            display: block;
+            width: 0px;
+            height: 18px;
+            border-left: #e2e2e2 1px solid;
+        }
+        .notice-slide {
+            display: block;
+            height: 100%;
+            margin-left: 44px;
+            text-align: left;
+            color: white;
+            font-size: 14px;
+            line-height: 44px;
+        }
+    }
+    
+    .home-category {
+        position: relative;
+        display: block;
+        /*width: 100%;*/
+        max-width: 100%;
+        text-align: center;
+        background-color: #ffffff;
+        overflow: hidden;
+        border-top: #e2e2e2 1px solid;
+        border-bottom: #e2e2e2 1px solid;
+        padding: 2px 0;
+        margin: 0 2px;
+        margin-top: 15px;
+        .category-item {
+            position: relative;
+            display: block;
+            float: left;
+            width: 50%;
+            max-width: 50%;
+            height: 0;
+            padding-bottom: 25%;
+            overflow: hidden;
+            background-color: #f6f6f6;
+            box-sizing: border-box;
+            border: #ffffff 2px solid;
+            .item-photo {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                width: 100%;
+                max-width: 100%;
+                height: 100%;
+            }
+            .item-mask {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+                width: 100%;
+                max-width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+            .item-text {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                display: block;
+                width: 100%;
+                height: 34px;
+                margin-top: -17px;
+                text-align: center;
+                color: #ffffff;
+                font-size: 18px;
+                font-weight: normal;
+            }
+        }
+    }
+    
+    .home-flex-picture{
+        margin: 5px 0 ;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        .flex-item{
+            padding: 5px 0;
+            width: 50vw;
+            img{
+                margin: auto;
+                display: block;
+                width: calc(50vw - 14px);
+                height: calc(25vw - 7px);
+                border: 1px solid rgba(0,0,0,0.1);
+            }
+        }
+        .flex-item-big{
+            padding: 5px 0;
+            width: 100%;
+            img{
+                margin: auto;
+                display: block;
+                width: calc(100% - 14px);
+                height: calc(40vw - 7px);
+                border: 1px solid rgba(0,0,0,0.1);
+            }
+        }
     }
 }

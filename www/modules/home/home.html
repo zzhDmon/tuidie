@@ -1,4 +1,4 @@
-<div class="app-container with-tabbar" ng-controller="HomeController">
+<div class="app-container with-tabbar tuidie-home" ng-controller="HomeController">
     <!--<div class="navbar fixed-top">
         <div class="search" ng-click="touchSearch()">
             <img class="search-icon" ng-src="image/ind-search.png" />
@@ -53,7 +53,7 @@
                 <div class="item-text">针剂</div>
             </div>
         </div>
-
+	
         <!-- Notice -->
         <div class="home-notice" ng-if="notices && notices.length">
             <!--<img class="notice-icon" ng-src="image/home-notice.png" />-->
@@ -62,11 +62,14 @@
            </div>
             <div class="notice-vline"></div>
             <div class="notice-slide swiper-container">
-                <div class="swiper-wrapper">
+                <!--<div class="swiper-wrapper">
                     <div class="swiper-slide" ng-repeat="notice in notices track by $index" ng-click="touchNotice(notice)">
                         {{notice.title}}
                     </div>
-                </div>
+                </div>-->
+                <ul>
+					<li ng-repeat="news in newslist track by $index">{{news}}</li>
+				</ul>
             </div>
         </div>
        
@@ -76,19 +79,7 @@
                 <img ng-src="{{product.default_photo.thumb}}" alt="" />
 <!--                <img ng-src="{{formatUrl(banner.photo.large) || 'image/default-photo.png'}}" class="slide-image" />-->
             </div>
-            <!--<div class="flex-item">
-                <img src="" alt="">
-            </div>
-            <div class="flex-item">
-                <img src="" alt="">
-            </div>
-            <div class="flex-item">
-                <img src="" alt="">
-            </div>
-
-            <div class="flex-item-big">
-                <img src="" alt="">
-            </div>-->
+            
         </div>
         <!--big picture-->
         
@@ -102,7 +93,7 @@
             </div>
             <p>首页</p>
         </div>
-        <div class="tab" ng-click="goCategory()">
+        <div class="tab" ui-sref="diary">
             <div class="img">
                 <img class="tab-icon" ng-src="image/tuidie/tabs/蜕蝶日记.png" />
             </div>

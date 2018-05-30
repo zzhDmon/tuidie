@@ -1,4 +1,408 @@
-.test {
-  color: red; }
-  .test a {
-    color: black; }
+.tuidie-home .home-search {
+  width: 100%;
+  height: 44px;
+  position: fixed;
+  z-index: 99;
+  top: 0; }
+  .tuidie-home .home-search .search {
+    position: relative;
+    margin: 5px auto;
+    height: 34px;
+    width: 80%;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 17px; }
+    .tuidie-home .home-search .search .search-icon {
+      position: absolute;
+      top: 5px;
+      left: 6px;
+      width: 24px;
+      height: 24px;
+      text-align: center;
+      line-height: 24px;
+      color: #f19ea6;
+      border-right: 1px solid #f19ea6; }
+      .tuidie-home .home-search .search .search-icon .iconfont {
+        font-size: 20px; }
+    .tuidie-home .home-search .search .search-text {
+      display: block;
+      width: 100%;
+      height: 34px;
+      margin: 0 auto;
+      padding-left: 38px;
+      box-sizing: border-box;
+      overflow: hidden;
+      color: #f19ea6;
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 34px; }
+
+.tuidie-home .home-banner {
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%;
+  text-align: center;
+  color: #404245;
+  background-color: #f6f6f6;
+  border-bottom: #e2e2e2 1px solid; }
+  .tuidie-home .home-banner .banner-slide {
+    display: block;
+    background-color: #ffffff; }
+    .tuidie-home .home-banner .banner-slide .slide-image {
+      width: 100%;
+      max-width: 100%;
+      height: 100%; }
+
+.tuidie-home .home-menu {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 5px 0;
+  width: 100%;
+  background-color: #ffffff;
+  overflow: hidden;
+  border-bottom: #e2e2e2 1px solid; }
+  .tuidie-home .home-menu .menu-item {
+    display: block;
+    width: 25%;
+    border: none;
+    box-sizing: border-box;
+    padding: 5px 0; }
+    .tuidie-home .home-menu .menu-item .item-icon {
+      display: block;
+      width: 44px;
+      height: 44px;
+      margin: 0 auto;
+      overflow: hidden; }
+    .tuidie-home .home-menu .menu-item .item-text {
+      display: block;
+      width: 100%;
+      height: 24px;
+      line-height: 24px;
+      box-sizing: border-box;
+      border: none;
+      overflow: hidden;
+      color: #404245;
+      font-size: 14px;
+      font-weight: normal;
+      text-align: center;
+      margin-top: 4px; }
+
+.tuidie-home .home-notice {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  height: 44px;
+  text-align: center;
+  background-color: #ff5268;
+  overflow: hidden; }
+  .tuidie-home .home-notice .notice-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+    color: white; }
+  .tuidie-home .home-notice .notice-vline {
+    position: absolute;
+    top: 13px;
+    left: 34px;
+    display: block;
+    width: 0px;
+    height: 18px;
+    border-left: #e2e2e2 1px solid; }
+  .tuidie-home .home-notice .notice-slide {
+    display: block;
+    height: 100%;
+    margin-left: 44px;
+    text-align: left;
+    color: white;
+    font-size: 14px;
+    line-height: 44px; }
+
+.tuidie-home .home-category {
+  position: relative;
+  display: block;
+  /*width: 100%;*/
+  max-width: 100%;
+  text-align: center;
+  background-color: #ffffff;
+  overflow: hidden;
+  border-top: #e2e2e2 1px solid;
+  border-bottom: #e2e2e2 1px solid;
+  padding: 2px 0;
+  margin: 0 2px;
+  margin-top: 15px; }
+  .tuidie-home .home-category .category-item {
+    position: relative;
+    display: block;
+    float: left;
+    width: 50%;
+    max-width: 50%;
+    height: 0;
+    padding-bottom: 25%;
+    overflow: hidden;
+    background-color: #f6f6f6;
+    box-sizing: border-box;
+    border: #ffffff 2px solid; }
+    .tuidie-home .home-category .category-item .item-photo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: 100%; }
+    .tuidie-home .home-category .category-item .item-mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3); }
+    .tuidie-home .home-category .category-item .item-text {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 34px;
+      margin-top: -17px;
+      text-align: center;
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: normal; }
+
+.tuidie-home .home-flex-picture {
+  margin: 5px 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap; }
+  .tuidie-home .home-flex-picture .flex-item {
+    padding: 5px 0;
+    width: 50vw; }
+    .tuidie-home .home-flex-picture .flex-item img {
+      margin: auto;
+      display: block;
+      width: calc(50vw - 14px);
+      height: calc(25vw - 7px);
+      border: 1px solid rgba(0, 0, 0, 0.1); }
+  .tuidie-home .home-flex-picture .flex-item-big {
+    padding: 5px 0;
+    width: 100%; }
+    .tuidie-home .home-flex-picture .flex-item-big img {
+      margin: auto;
+      display: block;
+      width: calc(100% - 14px);
+      height: calc(40vw - 7px);
+      border: 1px solid rgba(0, 0, 0, 0.1); }
+
+.tuidie-profile .profile-head {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 180px;
+  margin: 0;
+  background: linear-gradient(to bottom, #ff5266, #ffb7c1);
+  overflow: hidden; }
+  .tuidie-profile .profile-head .profile-head-bot {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 90px; }
+    .tuidie-profile .profile-head .profile-head-bot .in-head-bot {
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: -50vw;
+      width: 200vw;
+      height: 200vw;
+      border-radius: 50%;
+      background-color: white;
+      border-top: 1px solid #ff4f6b; }
+  .tuidie-profile .profile-head .head-user-info {
+    position: absolute;
+    top: 60px;
+    z-index: 3;
+    width: 100%; }
+    .tuidie-profile .profile-head .head-user-info .head-img {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto;
+      overflow: hidden; }
+      .tuidie-profile .profile-head .head-user-info .head-img .head-avatar {
+        display: block;
+        width: 100%;
+        height: 100%; }
+    .tuidie-profile .profile-head .head-user-info .info-name, .tuidie-profile .profile-head .head-user-info .info-grade {
+      width: 100%;
+      height: 25px;
+      text-align: center;
+      line-height: 25px;
+      font-size: 16px;
+      color: #333333; }
+
+.tuidie-profile .profile-flex-menu {
+  width: 100%;
+  padding: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #e6e6e6;
+  background-color: white; }
+  .tuidie-profile .profile-flex-menu .flex-item {
+    width: 33.33%;
+    text-align: center; }
+    .tuidie-profile .profile-flex-menu .flex-item .item-icon {
+      width: 100;
+      height: 30px;
+      line-height: 30px;
+      color: #ff273f; }
+      .tuidie-profile .profile-flex-menu .flex-item .item-icon .iconfont {
+        font-size: 20px; }
+    .tuidie-profile .profile-flex-menu .flex-item .item-text {
+      width: 100%;
+      height: 20px;
+      line-height: 20px;
+      font-size: 16px;
+      color: #333333; }
+
+.tuidie-profile .profile-flex-item {
+  width: 100%;
+  height: 54px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #e6e6e6;
+  background-color: white;
+  line-height: 54px; }
+  .tuidie-profile .profile-flex-item .item-icon {
+    width: 54px;
+    height: 54px;
+    text-align: center;
+    color: #ff273f; }
+    .tuidie-profile .profile-flex-item .item-icon .iconfont {
+      font-size: 25px; }
+  .tuidie-profile .profile-flex-item .item-name {
+    width: calc(100% - 74px);
+    height: 54px; }
+    .tuidie-profile .profile-flex-item .item-name a {
+      color: #333333; }
+  .tuidie-profile .profile-flex-item .item-more {
+    width: 20px;
+    height: 54px;
+    text-align: center;
+    color: dimgray; }
+    .tuidie-profile .profile-flex-item .item-more .iconfont {
+      font-size: 20px; }
+
+.tuidie-profile .profile-submit {
+  display: block;
+  height: 44px;
+  margin: 0 8px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #404245;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 44px;
+  text-align: center; }
+
+.tuidie-profile .profile-submit:hover {
+  background-color: #616161; }
+
+.tuidie-diary .navbar {
+  background-color: #ff273f; }
+
+.tuidie-diary .app-content .diary-list {
+  padding: 0 7px; }
+  .tuidie-diary .app-content .diary-list .diary-item {
+    margin: 0 0 10px;
+    width: 100%; }
+    .tuidie-diary .app-content .diary-list .diary-item .head-info {
+      display: flex;
+      justify-content: flex-start; }
+      .tuidie-diary .app-content .diary-list .diary-item .head-info .img {
+        width: 40px;
+        height: 40px; }
+        .tuidie-diary .app-content .diary-list .diary-item .head-info .img img {
+          display: block;
+          width: 100%;
+          height: 100%; }
+      .tuidie-diary .app-content .diary-list .diary-item .head-info .name {
+        padding: 0 0 0 10px;
+        width: calc(100% - 60px);
+        height: 40px;
+        line-height: 40px; }
+    .tuidie-diary .app-content .diary-list .diary-item .photo-info {
+      padding: 0 0 0 40px;
+      display: flex;
+      justify-content: space-around; }
+      .tuidie-diary .app-content .diary-list .diary-item .photo-info .photo-before, .tuidie-diary .app-content .diary-list .diary-item .photo-info .photo-after {
+        width: 50%; }
+        .tuidie-diary .app-content .diary-list .diary-item .photo-info .photo-before img, .tuidie-diary .app-content .diary-list .diary-item .photo-info .photo-after img {
+          display: block;
+          width: 95%; }
+    .tuidie-diary .app-content .diary-list .diary-item .text-desc {
+      margin: 5px 0 0;
+      width: 100%;
+      padding: 0 0 0 40px;
+      line-height: 20px;
+      font-size: 14px; }
+    .tuidie-diary .app-content .diary-list .diary-item .logo-one {
+      margin: 5px 0 0;
+      width: 100%;
+      padding: 0 0 0 20px;
+      display: flex;
+      justify-content: flex-start; }
+      .tuidie-diary .app-content .diary-list .diary-item .logo-one .logo {
+        width: 20px;
+        height: 20px; }
+        .tuidie-diary .app-content .diary-list .diary-item .logo-one .logo img {
+          display: block;
+          width: 100%;
+          height: 100%; }
+      .tuidie-diary .app-content .diary-list .diary-item .logo-one .text {
+        padding: 0 0 0 5px;
+        width: calc(100% - 20px);
+        height: 20px;
+        line-height: 20px;
+        font-size: 12px;
+        color: #000aff; }
+    .tuidie-diary .app-content .diary-list .diary-item .logo-two {
+      margin: 5px 0 0;
+      width: 100%;
+      padding: 0 0 0 20px;
+      display: flex;
+      justify-content: flex-start; }
+      .tuidie-diary .app-content .diary-list .diary-item .logo-two .logo {
+        width: 20px;
+        height: 20px; }
+        .tuidie-diary .app-content .diary-list .diary-item .logo-two .logo img {
+          display: block;
+          width: 100%;
+          height: 100%; }
+      .tuidie-diary .app-content .diary-list .diary-item .logo-two .text {
+        padding: 0 0 0 5px;
+        width: calc(100% - 120px);
+        height: 20px;
+        line-height: 20px;
+        font-size: 12px;
+        color: #ff273f; }
+      .tuidie-diary .app-content .diary-list .diary-item .logo-two .price {
+        width: 100px;
+        font-size: 16px;
+        color: #ff273f;
+        text-align: right; }
