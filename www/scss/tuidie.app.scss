@@ -1,5 +1,10 @@
 $bg-active-color:rgb(255,39,63);
+$line-main-color:rgb(230,230,230);
+$font-main-color:rgb(51,51,51);
+$font-sup-color:rgb(102,102,102);
+$navbar-height:44px;
 
 @import "www/modules/home/home";
 @import "www/modules/profile/profile";
 @import "www/modules/diary/diary";
+@import "www/modules/homemenu-list/homemenu-list";

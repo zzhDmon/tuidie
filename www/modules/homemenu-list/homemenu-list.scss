@@ -1,0 +1,69 @@
+.tuidie-homemenu-list{
+    .under-navbar{
+        position: absolute;;
+        top: $navbar-height;
+        z-index: 1;
+        width: 100%;
+        height: 40px;
+        background-color: white;
+        display: flex;
+        justify-content: flex-start;
+        .flex-item{
+            width: 33.33%;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            color: $bg-active-color;
+        }
+        
+        .sort-list{
+            position: absolute;
+            top: 40px;
+            left: 33.33%;
+            width: 33.33%;
+            height: auto;
+            display: none;
+            background-color: white;
+            .sort-item{
+                width: 100%;
+                height: 25px;
+                text-align: center;
+                line-height: 25px;
+                font-size: 14px;
+                color: $font-sup-color;
+            }
+        }
+        
+    }
+    .fliter-list-wrapper{
+        position: flex;
+        top: 84px;
+        width: 100%;
+        height: auto;
+            display: none;
+        background-color: white;
+        .confirm-btn-wrapper{
+            width: 100%;
+            height: 40px;
+            display: flex;
+            justify-content: flex-start;
+            .filter-item{
+                width: 50%;
+                height: 40px;
+                text-align: center;
+                line-height: 40px;
+            }
+            .reset{
+                background-color: white;
+                color: $bg-active-color;
+            }
+            .confirm{
+                color: white;
+                background-color: $bg-active-color;
+            }
+        }
+    }
+    .app-content{
+        margin: 40px 0 0;
+    }
+}
