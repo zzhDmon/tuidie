@@ -1,0 +1,209 @@
+<div class="app-container with-tabbar tuidie-profile" ng-controller="ProfileController">
+	<div class="app-content">
+        <div class="profile-head">
+            
+            <div ui-sref="my-team" class="head-user-info">
+            	<div class="head-img"><img class="head-avatar" ng-src="image/default-avatar.png" lazy-img="{{user.avatar.thumb}}"/></div>
+            	<div class="head-info" ng-click="touchSignin()">
+	                <div class="info-name">{{isSignIn() ? userName: '点击登录'}}</div>
+	                <div class="info-grade" ng-if="isSignIn()">{{user.rank ? user.rank.name : '默认等级'}}</div>
+	            </div>
+            </div>
+            <div class="profile-head-bot">
+                <div class="in-head-bot"></div>
+            </div>
+        </div>
+
+        <!--<div class="profile-item" ng-click="touchAllOrders()">
+            <img class="item-icon" src="image/icon-order.png"/>
+
+            <div class="item-name">我的订单</div>
+            <div class="item-desc">查看全部订单</div>
+            <img class="item-arrow" src="image/nav-right.png"/>
+        </div>-->
+
+        <!--<div class="profile-menu">
+            <div class="menu-item" ng-click="touchOrderCreated()">
+                <img class="item-icon" src="image/status-created.png"/>
+
+                <div class="item-badge" ng-if="cartModel.subtotal && cartModel.subtotal.created > 0">
+                    {{cartModel.subtotal.created}}
+                </div>
+                <div class="item-text">待付款</div>
+            </div>
+            <div class="menu-item" ng-click="touchOrderPayed()">
+                <img class="item-icon" src="image/status-paied.png"/>
+
+                <div class="item-badge" ng-if="cartModel.subtotal && cartModel.subtotal.paid > 0">
+                    {{cartModel.subtotal.paid}}
+                </div>
+                <div class="item-text">待发货</div>
+            </div>
+            <div class="menu-item" ng-click="touchOrderDelivering()">
+                <img class="item-icon" src="image/status-delivering.png"/>
+
+                <div class="item-badge" ng-if="cartModel.subtotal && cartModel.subtotal.delivering > 0">
+                    {{cartModel.subtotal.delivering}}
+                </div>
+                <div class="item-text">待收货</div>
+            </div>
+            <div class="menu-item" ng-click="touchOrderDelivered()">
+                <img class="item-icon" src="image/status-deliveried.png"/>
+
+                <div class="item-badge" ng-if="cartModel.subtotal && cartModel.subtotal.deliveried > 0">
+                    {{cartModel.subtotal.deliveried}}
+                </div>
+                <div class="item-text">待评价</div>
+            </div>
+        </div>-->
+        <div class="profile-flex-menu">
+        	<div ui-sref="my-order({tab:'created'})" class="flex-item">
+        		<div class="item-icon"><i class="iconfont icon-daifukuan"></i></div>
+        		<div class="item-text">代付款</div>
+        	</div>
+        	<div ui-sref="my-favorite" class="flex-item">
+        		<div class="item-icon"><i class="iconfont icon-shoucang"></i></div>
+        		<div class="item-text">收藏</div>
+        	</div>
+        	<div ui-sref="my-recommend" class="flex-item">
+        		<div class="item-icon"><i class="iconfont icon-tuandui"></i></div>
+        		<div class="item-text">团队</div>
+        	</div>
+        </div>
+
+        <!--<div class="profile-item" ng-click="touchFav()">
+            <img class="item-icon" src="image/icon-favorite.png"/>
+
+            <div class="item-name">我的收藏</div>
+            <div class="item-desc"></div>
+            <img class="item-arrow" src="image/nav-right.png"/>
+        </div>-->
+
+        <!--<div class="profile-item" ng-click="touchAddress()">
+            <img class="item-icon" src="image/icon-address.png"/>
+			<div class="item-name">收货地址</div>
+            <div class="item-desc"></div>
+            <img class="item-arrow" src="image/nav-right.png"/>
+        </div>
+
+        <div class="profile-item" ng-click="touchRecommend()">
+            <img class="item-icon" src="image/icon-score.png"/>
+            <div class="item-name">我的推荐</div>
+            <div class="item-desc"></div>
+            <img class="item-arrow" src="image/nav-right.png"/>
+        </div>
+
+        <div class="profile-item" ng-click="touchScore()">
+            <img class="item-icon" src="image/icon-score.png"/>
+            <div class="item-name">我的积分</div>
+            <div class="item-desc"></div>
+            <img class="item-arrow" src="image/nav-right.png"/>
+        </div>
+
+        <div class="profile-item" ng-click="touchCashGift()">
+            <img class="item-icon" src="image/icon-cashgift.png"/>
+            <div class="item-name">我的红包</div>
+            <div class="item-desc"></div>
+            <img class="item-arrow" src="image/nav-right.png"/>
+        </div>
+
+        <div class="profile-item" ng-click="touchBonus()" ng-if="authorize">
+            <img class="item-icon" src="image/e0_recommend.png"/>
+            <div class="item-name">我的推荐</div>
+            <div class="item-desc"></div>
+            <img class="item-arrow" src="image/nav-right.png"/>
+        </div>
+
+        <div class="profile-item" ng-click="touchBalance()" ng-if="authorize">
+            <img class="item-icon" src="image/e0_balance.png"/>
+            <div class="item-name">我的资金</div>
+            <div class="item-desc"></div>
+            <img class="item-arrow" src="image/nav-right.png"/>
+        </div>
+
+        <div class="profile-item" ng-click="touchHelps()">
+            <img class="item-icon" src="image/icon-article.png"/>
+            <div class="item-name">使用帮助</div>
+            <div class="item-desc"></div>
+            <img class="item-arrow" src="image/nav-right.png"/>
+        </div>
+
+        <div class="profile-item" ng-click="touchPassword()" ng-if="!isWeixin()">
+            <img class="item-icon" src="image/icon-article.png"/>
+
+            <div class="item-name">修改密码</div>
+            <div class="item-desc"></div>
+            <img class="item-arrow" src="image/nav-right.png"/>
+        </div>-->
+        <div ui-sref="my-score({tab:'all'})" class="profile-flex-item">
+        	<div class="item-icon"><i class="iconfont icon-zhuanjifen"></i></div>
+        	<div class="item-name">我的积分</div>
+        	<div class="item-more"><i class="iconfont icon-gengduo"></i></div>
+        </div>
+        <div ui-sref="my-cashgift" class="profile-flex-item">
+        	<div class="item-icon"><i class="iconfont icon-hongbao"></i></div>
+        	<div class="item-name">我的红包</div>
+        	<div class="item-more"><i class="iconfont icon-gengduo"></i></div>
+        </div>
+        <div ui-sref="my-weixin" class="profile-flex-item">
+        	<div class="item-icon"><i class="iconfont icon-weixin"></i></div>
+        	<div class="item-name">客服微信</div>
+        	<div class="item-more"><i class="iconfont icon-gengduo"></i></div>
+        </div>
+        <div class="profile-flex-item">
+	        	<div class="item-icon"><i class="iconfont icon-shouji"></i></div>
+	        	<div class="item-name"><a href="tel:19959276397">客服电话</a></div>
+	        	<div class="item-more"><i class="iconfont icon-gengduo"></i></div>
+        </div>
+        <div class="profile-flex-item">
+	        	<div class="item-icon"><i class="iconfont icon-tuijian"></i></div>
+	        	<div class="item-name">我的推荐码</div>
+	        	<div class="item-more"><i class="iconfont icon-gengduo"></i></div>
+        </div>
+        <div class="profile-flex-item">
+        	<div class="item-icon"><i class="iconfont icon-yinhangka"></i></div>
+        	<div class="item-name">我的银行卡</div>
+        	<div class="item-more"><i class="iconfont icon-gengduo"></i></div>
+        </div>
+        <div ui-sref="change-password" class="profile-flex-item">
+        	<div class="item-icon"><i class="iconfont icon-mibao"></i></div>
+        	<div class="item-name">密码与保护</div>
+        	<div class="item-more"><i class="iconfont icon-gengduo"></i></div>
+        </div>
+
+        <div class="profile-submit" ng-click="touchSignout()" ng-if="isSignIn()">
+           	 退出登录
+        </div>
+
+        <div class="tabbar fixed-bottom">
+            <div class="tab" ng-click="goHome()">
+                <div class="img">
+                    <img class="tab-icon" ng-src="image/tuidie/tabs/首页.png" />
+                </div>
+                <p>首页</p>
+            </div>
+            <div class="tab" ui-sref="diary">
+                <div class="img">
+                    <img class="tab-icon" ng-src="image/tuidie/tabs/蜕蝶日记.png" />
+                </div>
+                <p>蜕蝶日记</p>
+            </div>
+            <div class="tab" ng-click="goCart()">
+                <div class="img">
+                    <img class="tab-icon" ng-src="image/tuidie/tabs/购物车.png" />
+                </div>
+                <p>购物车</p>
+                <div class="tab-badge" ng-if="cartModel.total > 0">
+                    {{cartModel.total}}
+                </div>
+            </div>
+            <div class="tab active" ng-click="goProfile()">
+                <div class="img">
+                    <img class="tab-icon" ng-src="image/tuidie/tabs/我的2.png" />
+                </div>
+                <p>我的</p>
+            </div>
+        </div>
+
+    </div>
+</div>

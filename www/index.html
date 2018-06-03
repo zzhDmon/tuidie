@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
   <meta content="yes" name="apple-mobile-web-app-capable">
   <meta content="yes" name="apple-touch-fullscreen">
-  <meta content="telephone=no,email=no" name="format-detection">
+  <meta content="telephone=yes,email=no" name="format-detection">
 
   <link rel="apple-touch-icon-precomposed" href="image/apple-touch-icon.png">
   <link rel="apple-touch-icon" href="image/apple-touch-icon.png">
@@ -34,22 +34,23 @@
   <meta name="theme-color" content="#ffffff">
 
   <!-- build:css css/app.base.css -->
-  <link rel="stylesheet" href="css/reset.css" type="text/css" />
   <!-- <link rel="stylesheet" href="libs/assets/animate.css/animate.css" type="text/css" /> -->
-  <link rel="stylesheet" href="libs/swiper/css/swiper.css" type="text/css" />
+  <!--<link rel="stylesheet" href="libs/swiper/css/swiper.css" type="text/css" />
   <link rel="stylesheet" href="libs/angular/angular-loading-bar/loading-bar.css" type="text/css" />
   <link rel="stylesheet" href="libs/angular/anim-in-out/anim-in-out.css" type="text/css" />
   <link rel="stylesheet" href="libs/angular/ngToast/ngToast.css" type="text/css" />
-  <link rel="stylesheet" href="libs/angular/ngToast/ngToast-animations.css" type="text/css" />
-  <!-- endbuild -->
+  <link rel="stylesheet" href="libs/angular/ngToast/ngToast-animations.css" type="text/css" />-->
+ <!-- endbuild -->
+ 
+ 	<link rel="stylesheet" type="text/css" href="build/css/libs.min.css"/>
+ 	<link rel="stylesheet" type="text/css" href="build/css/main.min.css"/>
 
   <!-- build:css css/app.main.css -->
+  <!--<link rel="stylesheet" href="css/reset.css" type="text/css" />
   <link rel="stylesheet" href="css/app.css" type="text/css" />
-  <link rel="stylesheet" href="css/tuidie.app.css" type="text/css" />
+  <link rel="stylesheet" href="css/tuidie.app.css" type="text/css" />-->
   <!-- iconfont -->
-  <!--<link href="lib/iconfont/iconfont.css" rel="stylesheet">-->
   <link href="//at.alicdn.com/t/font_662973_0s2odmji1e6u5wmi.css" rel="stylesheet">
-  <!--<script src="lib/iconfont/iconfont.js"></script>-->
   <script src="//at.alicdn.com/t/font_662973_0s2odmji1e6u5wmi.js"></script>
   <!-- endbuild -->
 
@@ -77,44 +78,47 @@
   </div>
 
   <!-- build:js js/app.libs.js -->
-  <script src="libs/security/core.js"></script>
+  <!--<script src="libs/security/core.js"></script>
   <script src="libs/security/md5.js"></script>
   <script src="libs/security/sha256.js"></script>
   <script src="libs/security/hmac.js"></script>
   <script src="libs/security/xxtea.js"></script>
   <script src="libs/jquery/js/jquery.js"></script>
   <script src="libs/jquery/js/jquery.js"></script>
-  <script src="libs/angular/angular/angular.js"></script>
+  <script src="libs/swiper/js/swiper.js"></script>
+  <script src="libs/wechat/jweixin-1.2.0.js"></script>-->
+  <script src="build/js/otherlibs/otherlibs.min.js"></script>
+  
+  
+  <!--<script src="libs/angular/angular/angular.js"></script>
   <script src="libs/angular/angular-animate/angular-animate.js"></script>
   <script src="libs/angular/angular-aria/angular-aria.js"></script>
   <script src="libs/angular/angular-cookies/angular-cookies.js"></script>
   <script src="libs/angular/angular-messages/angular-messages.js"></script>
   <script src="libs/angular/angular-resource/angular-resource.js"></script>
-  <script src="libs/angular/angular-sanitize/angular-sanitize.js"></script>
+ <script src="libs/angular/angular-sanitize/angular-sanitize.js"></script>
   <script src="libs/angular/angular-ui-router/angular-ui-router.js"></script>
   <script src="libs/angular/angular-lazy-img/angular-lazy-img.js"></script>
   <script src="libs/angular/angular-cache/angular-cache.js"></script>
   <script src="libs/angular/angular-loading-bar/loading-bar.js"></script>
-  <!-- <script src="libs/angular/anim-in-out/anim-in-out.js"></script> -->
   <script src="libs/angular/ngStorage/ngStorage.js"></script>
   <script src="libs/angular/ngInfiniteScroll/ng-infinite-scroll.js"></script>
-  <script src="libs/swiper/js/swiper.js"></script>
-  <!-- <script src="libs/fastclick/fastclick.js"></script> -->
-  <script src="libs/wechat/jweixin-1.2.0.js"></script>
-  <script src="libs/angular/ngToast/ngToast.js"></script>
-  <script src="libs/ngScreening/ngScreening.min.js"></script>
+  <script src="libs/angular/ngToast/ngToast.js"></script>-->
+ 
+  <script src="build/js/angulars/angulars.min.js"></script>
+  
   <!-- endbuild -->
 
-  <!-- build:js js/app.base.js -->
+  <!-- build:js js/apps.min.js -->
   <!-- app -->
-  <script src="app/app.js"></script>
+  <!--<script src="app/app.js"></script>
   <script src="app/app.main.js"></script>
   <script src="app/app.router.js"></script>
   <script src="app/app.constants.js"></script>
-  <!-- service -->
+  
   <script src="app/app.authentication.js"></script>
   <script src="app/app.network.js"></script>
-  <!-- api -->
+  
   <script src="app/network/API/api.access.service.js"></script>
   <script src="app/network/API/api.areacode.service.js"></script>
   <script src="app/network/API/api.article.service.js"></script>
@@ -155,26 +159,30 @@
   <script src="app/network/API/api.balance.service.js"></script>
   <script src="app/network/API/api.withdraw.service.js"></script>
   <script src="app/network/api.service.js"></script>
-  <!-- services -->
+  
   <script src="app/services/config.service.js"></script>
   <script src="app/services/weixin.service.js"></script>
-  <!-- filters -->
+ 
   <script src="app/filters/formatNickname.js"></script>
   <script src="app/filters/localTime.js"></script>
   <script src="app/filters/trustHtml.js"></script>
-  <!-- directives -->
+ 
   <script src="app/directives/ui-back.js"></script>
   <script src="app/directives/ui-butterbar.js"></script>
   <script src="app/directives/ui-focus.js"></script>
   <script src="app/directives/ui-scroll.js"></script>
   <script src="app/directives/ui-toggleclass.js"></script>
   <script src="app/directives/ui-valid-input.js"></script>
-  <script src="app/directives/ui-valid-link.js"></script>
+  <script src="app/directives/ui-valid-link.js"></script>-->
+  <script src="build/js/apps/apps.min.js" type="text/javascript">
+  	
+  </script>
+  
   <!-- endbuild -->
 
   <!-- build:js js/app.main.js -->
   <!-- modules -->
-  <script src="modules/signin/signin.controller.js"></script>
+  <!--<script src="modules/signin/signin.controller.js"></script>
   <script src="modules/signin/signin.js"></script>
   <script src="modules/signup/signup.controller.js"></script>
   <script src="modules/signup/signup.js"></script>
@@ -184,6 +192,7 @@
   <script src="modules/home/home.js"></script>
   <script src="modules/homemenu-list/homemenu-list.controller.js"></script>
   <script src="modules/homemenu-list/homemenu-list.js"></script>
+  <script src="modules/homemenu-list/homemenu-list.model.js"></script>
   <script src="modules/category/category.controller.js"></script>
   <script src="modules/category/category.js"></script>
   <script src="modules/cart/cart.model.js"></script>
@@ -302,8 +311,8 @@
   <script src="modules/withdraw-success/withdraw-success.js"></script>
 
   <script src="modules/bonus-rule/bonus-rule.controller.js"></script>
-  <script src="modules/bonus-rule/bonus-rule.js"></script>
-
+  <script src="modules/bonus-rule/bonus-rule.js"></script>-->
+	<script src="build/js/modules/modules.min.js"></script>
   <!-- endbuild -->
 
   <script type="text/javascript">
