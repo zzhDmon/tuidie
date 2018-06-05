@@ -14,32 +14,26 @@ var ngAnnotate = require('gulp-ng-annotate');
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'] , function() {
-// gulp.task('serve',  function() {
-
-    browserSync.init({
-        server: "./www"
+	 browserSync.init({
+		server: "./www/build",
+		port:3001
     });
 
-    gulp.watch("www/**/*.scss", ['sass']);
-    gulp.watch("www/**/*.html").on('change', browserSync.reload);
-    gulp.watch("www/**/*.js").on('change', browserSync.reload);
+    gulp.watch("www/build/**/*.scss", ['sass']);
+    gulp.watch("www/build/**/*.html").on('change', browserSync.reload);
+    gulp.watch("www/build/**/*.js").on('change', browserSync.reload);
 });
+// gulp.task('serve', ['sass'] , function() {
+// 	browserSync.init({
+// 		server: "./www",
+// 		port:4000
+//     });
 
-/**
- * Compile with gulp-ruby-sass + source maps
- */
-// gulp.task('sass', function () {
-
-//     return sass('app/scss', {sourcemap: true})
-//         .on('error', function (err) {
-//             console.error('Error!', err.message);
-//         })
-//         .pipe(sourcemaps.write('./', {
-//             includeContent: false,
-//             sourceRoot: '/app/scss'
-//         }))
-//         .pipe(browserSync.stream({match: '**/*.css'}));
+//     gulp.watch("www/**/*.scss", ['sass']);
+//     gulp.watch("www/**/*.html").on('change', browserSync.reload);
+//     gulp.watch("www/**/*.js").on('change', browserSync.reload);
 // });
+
 
 gulp.task('sass', function(done) {
     gulp.src('./www/scss/tuidie.app.scss')
@@ -59,7 +53,6 @@ gulp.task('sass', function(done) {
 //   test合并压缩css
    gulp.task('libcss', function(done) {
        gulp.src('./www/libs/**/*.css')
-       //   压缩同份css
          .pipe(minifyCss({
            // keepSpecialComments: 0
            keepSpecialComments:'*'//保留所有特殊前缀 当你用autoprefixer生成的浏览器前缀，如果不加这个参数，有可能将会删除你的部分前缀
@@ -102,7 +95,16 @@ gulp.task('sass', function(done) {
                .pipe(gulp.dest('./www/build/js/controllers/'))  
          }); 
          
-         gulp.task('minify', function() {  
+         gulp.task('minifyotherlib', function() {  
+		    return gulp.src(['./www/libs/**/*.js','!./www/libs/angular/**/*.js']) //特意如此，避免顺序导致的问题
+		        .pipe(ngAnnotate())
+		        .pipe(ngmin({dynamic: false}))  
+		        .pipe(stripDebug())  
+		        .pipe(uglify())  
+		        .pipe(concat('otherlibs.min.js'))  
+		        .pipe(gulp.dest('./www/build/js/otherlibs/'))  
+		}); 
+         gulp.task('minifyangular', function() {  
 		    return gulp.src(['./www/libs/angular/angular/angular.js',
 		    				'./www/libs/angular/angular-animate/angular-animate.js',
 		    				'./www/libs/angular/angular-aria/angular-aria.js',

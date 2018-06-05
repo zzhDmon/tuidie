@@ -19,25 +19,25 @@
             <div class="table-responsive" ng-if="myRecommendModel.bonus_info.rules.length">
                 <table class="table">
                     <thead>
-                    <tr>
-                        <th style="width:25%">等级</th>
-                        <th style="width:25%">人数</th>
-                        <th style="width:25%">积分分成</th>
-                        <th style="width:25%">现金分成</th>
-                    </tr>
+                        <tr>
+                            <th style="width:25%">等级</th>
+                            <th style="width:25%">人数</th>
+                            <th style="width:25%">积分分成</th>
+                            <th style="width:25%">现金分成</th>
+                        </tr>
                     </thead>
                     <tbody>
-                    <tr  ng-repeat="rule in myRecommendModel.bonus_info.rules track by $index" >
-                            <td >{{rule.rank}}</td>
-                            <td>{{rule.recommend_amount}}</td>
-                            <td>{{rule.score_percentage}}</td>
-                            <td>{{rule.price_percentage}}</td>
-
-                    </tr>
+                    <!-- <tr ng-repeat="rule in myRecommendrules track by $index"> -->
+                        <tr class="two-tr" ng-repeat="rule in myRecommendModel.bonus_info.rules track by $index">
+                                <td >{{rule.rank}}</td>
+                                <td>{{rule.recommend_amount}}</td>
+                                <td>{{rule.score_percentage}}</td>
+                                <td>{{rule.price_percentage}}</td>
+                        </tr>
                     </tbody>
                 </table>
 
-		<table class="table">
+		        <table class="table">
                     <thead>
                     <tr>
                         <th>用户名</th>

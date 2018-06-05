@@ -27,17 +27,16 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr  ng-repeat="rule in myRecommendModel.bonus_info.rules track by $index" >
+                    <tr ng-repeat="rule in myRecommendrules track by $index">
                             <td >{{rule.rank}}</td>
                             <td>{{rule.recommend_amount}}</td>
                             <td>{{rule.score_percentage}}</td>
                             <td>{{rule.price_percentage}}</td>
-
                     </tr>
                     </tbody>
                 </table>
 
-		<table class="table">
+		        <table class="table">
                     <thead>
                     <tr>
                         <th>用户名</th>

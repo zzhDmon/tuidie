@@ -60,7 +60,7 @@
 	                $scope.isLoaded = true;
 	                $scope.isLoading = false;
 	                $scope.isLastPage = (resData.articles && resData.articles.length < per_page) ? !$scope.isEmpty : false;
-	                console.log( $scope.isLoaded,$scope.isLoading,$scope.isLastPage)
+	            
                 });
         }
 
@@ -70,7 +70,7 @@
                 
         
         $scope.articleDetail=function(article){
-        	 $window.location.href = article.link;
+        	 $state.go('diary-detail',{url:article.link})
         }
         function _touchNotice(notice) {
             var url = '';

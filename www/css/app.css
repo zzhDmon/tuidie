@@ -6360,6 +6360,9 @@ a{
 .table-responsive table tbody tr{
     text-align: center;
 }
+.table-responsive table tbody .two-tr:nth-child(3){
+    display: none;
+}
 
 .table-responsive > table > tbody > tr > td{
     width: 25%;

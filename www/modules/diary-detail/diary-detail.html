@@ -1,0 +1,22 @@
+<div class="app-container with-navbar tuidie-diary-detail" ng-controller="diaryDetailController">
+
+    <div class="navbar fixed-top">
+        <div class="navbar-left hide-weixin" ng-click="goBack()">
+            <!--<img class="button-icon" src="image/nav-left.png"/>
+            <div class="button-text">返回</div>-->
+			<div class="back">
+            	<i class="iconfont icon-fanhui"></i>
+            </div>
+        </div>
+        <div class="navbar-title">
+            蜕蝶日记
+        </div>
+    </div>
+
+    <div class="app-content">
+        <!-- <iframe style="height:100%;width:100%;min-height: 100%" ng-src="{{otherSrc}}"></iframe>  -->
+        <iframe style="width:100vw;height:calc(100vh - 44px);" id="detail_iframe" style="height:100%;width:100%;min-height: 100%" ></iframe> 
+
+    </div>
+
+</div>

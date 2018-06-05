@@ -74,7 +74,7 @@
         border-bottom: #e2e2e2 1px solid;
         .menu-item {
             display: block;
-            width: 25%;
+            width: 16.66%;
             border: none;
             box-sizing: border-box;
             padding: 5px 0;
@@ -214,7 +214,7 @@
                 margin: auto;
                 display: block;
                 width: calc(50vw - 14px);
-                height: calc(25vw - 7px);
+                height: auto;
                 border: 1px solid rgba(0,0,0,0.1);
             }
         }

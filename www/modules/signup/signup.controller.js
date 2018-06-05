@@ -87,15 +87,15 @@
                 return;
 			}
 
-            if ( !email || email.length < 5 ) {
-                $scope.toast('请输入正确的邮箱地址');
-                return;
-            }
+            // if ( !email || email.length < 5 ) {
+            //     $scope.toast('请输入正确的邮箱地址');
+            //     return;
+            // }
 
             var params = {};
             params.username = username;
             params.password = password;
-            params.email = email;
+            params.email = username+'@company.com';
 
             if(AppAuthenticationService.getReferences()){
                 params.invite_code =  parseInt(AppAuthenticationService.getReferences());

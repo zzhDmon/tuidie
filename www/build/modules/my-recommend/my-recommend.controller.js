@@ -13,6 +13,12 @@
 
         $scope.myRecommendModel = MyRecommendModel;
         $scope.myRecommendModel.reload();
+        // myRecommendModel.bonus_info.rules
+        if($scope.myRecommendModel.bonus_info.rules.length>2){
+            $scope.myRecommendrules=$scope.myRecommendModel.bonus_info.rules.slice(0,2)
+        }else{
+            $scope.myRecommendrules=$scope.myRecommendModel.bonus_info.rules
+        }
 
     }
 

@@ -13,6 +13,7 @@
 
         $scope.myRecommendModel = MyRecommendModel;
         $scope.myRecommendModel.reload();
+       
 
     }
 

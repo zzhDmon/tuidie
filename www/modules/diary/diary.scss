@@ -14,12 +14,13 @@
         .diary-list{
             padding: 0 7px;
             .diary-item{
-                margin:  0 0 10px;
+                box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.12);
+                margin:  10px 0 0;
                 width: 100%;
                 border-bottom: 1px solid $line-main-color;
                 h5.title{
                     margin: 0;
-                    padding: 5px 0;
+                    padding: 5px 5px;
                     width: 100%;
                     line-height: 20px;
                     font-size: 16px;
